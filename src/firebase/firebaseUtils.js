@@ -2,6 +2,7 @@ import firebase from 'firebase/app'
 import 'firebase/firestore'
 import 'firebase/auth'
 
+// firebase config
 const firebaseConfig = {
   apiKey: 'AIzaSyC4w_WCqKb-bAUFgssyNkjE-YEXo2ri-Qs',
   authDomain: 'e-commerce-app-af2c0.firebaseapp.com',
@@ -13,10 +14,38 @@ const firebaseConfig = {
   measurementId: 'G-W2WEKMT7ET'
 }
 
+// initializes firebase
 firebase.initializeApp(firebaseConfig)
 
-export const auth = firebase.auth()
 export const firestore = firebase.firestore()
+export const auth = firebase.auth()
+
+// // initializes firestore
+// const db = firebase.firestore()
+
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+  if (!userAuth) return
+
+  const userRef = firestore.doc(`users/${userAuth.uid}`)
+  const snapShot = await userRef.get()
+
+  if (!snapShot.exists) {
+    const { displayName, email } = userAuth
+    const createdAt = new Date()
+
+    try {
+      await userRef.set({
+        displayName,
+        email,
+        createdAt,
+        ...additionalData
+      })
+    } catch (error) {
+      console.log('error creating user', error.message)
+    }
+  }
+  return userRef
+}
 
 // Google authentication setup
 const provider = new firebase.auth.GoogleAuthProvider()
