@@ -17,6 +17,11 @@
   z-index: 5;
 }
 
+.cart-dropdown .empty-message {
+  font-size: 1.4rem;
+  margin: 4rem auto;
+}
+
 .cart-dropdown .cart-items {
   height: 240px;
   display: -webkit-box;

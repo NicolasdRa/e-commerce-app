@@ -1,5 +1,6 @@
-.collection-item {
-  width: 22%;
+.checkout-page {
+  width: 55%;
+  min-height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7,38 +8,36 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 350px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 50px auto 0;
 }
 
-.collection-item .image {
+.checkout-page .checkout-header {
   width: 100%;
-  height: 95%;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 5px;
-}
-
-.collection-item .collection-footer {
-  width: 100%;
-  height: 5%;
+  padding: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 18px;
+  border-bottom: 1px solid darkgrey;
 }
 
-.collection-item .collection-footer .name {
-  width: 90%;
-  margin-bottom: 15px;
+.checkout-page .checkout-header .header-block {
+  text-transform: capitalize;
+  width: 23%;
 }
 
-.collection-item .collection-footer .price {
-  width: 10%;
+.checkout-page .checkout-header .header-block:last-child {
+  width: 8%;
 }
-/*# sourceMappingURL=collection-item.styles.css.map */
+
+.checkout-page .total {
+  margin-top: 30px;
+  margin-left: auto;
+  font-size: 36px;
+}
+/*# sourceMappingURL=Checkout.css.map */
