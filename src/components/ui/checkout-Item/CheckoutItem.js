@@ -15,7 +15,7 @@ const CheckoutItem = ({
   decrementOrRemoveItem
 }) => {
   const { name, imageUrl, quantity, price } = cartItem
-  console.log(cartItem)
+
   return (
     <div className='checkout-item'>
       <div className='image-container'>
