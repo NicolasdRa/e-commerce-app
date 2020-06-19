@@ -29,7 +29,17 @@
 }
 
 .checkout-item .quantity {
-  padding-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.checkout-item .quantity .arrow {
+  cursor: pointer;
+}
+
+.checkout-item .quantity .value {
+  margin: 0 .8rem;
 }
 
 .checkout-item .remove-button {

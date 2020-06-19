@@ -19,6 +19,7 @@
 .header .options {
   width: 50%;
   height: 100%;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,4 +35,5 @@
   padding: 10px 15px;
   cursor: pointer;
 }
+
 /*# sourceMappingURL=Header.css.map */
