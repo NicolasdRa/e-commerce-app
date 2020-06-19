@@ -28,4 +28,24 @@
         margin-left: auto;
         font-size: 36px;
     }
+
+    .test-card-warning {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: 3rem auto;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: red;
+
+        .test-card-number {
+            margin-top: 1rem;
+        }
+    }
+
+    button {
+        margin-left: auto;
+    }
+
 }
