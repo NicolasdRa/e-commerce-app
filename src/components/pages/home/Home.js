@@ -1,12 +1,13 @@
 import React from 'react'
 import MenuDirectory from '../../ui/menu-directory/MenuDirectory'
-import './Home.scss'
+
+import { HomeContainer } from './Home.styles'
 
 const Home = props => {
   return (
-    <div className='homepage'>
-      <MenuDirectory props={props} />
-    </div>
+    <HomeContainer>
+      <MenuDirectory />
+    </HomeContainer>
   )
 }
 export default Home
