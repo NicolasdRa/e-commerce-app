@@ -13,6 +13,7 @@ import Checkout from './components/pages/checkout/Checkout'
 import { setCurrentUser } from '../src/components/redux/user/userActions'
 import './App.css'
 import { selectCurrentUser } from './components/redux/user/userSelectors'
+
 import { auth, createUserProfileDocument } from './firebase/firebaseUtils'
 
 class App extends Component {
@@ -33,6 +34,10 @@ class App extends Component {
         })
       }
       setCurrentUser(userAuth)
+      // addCollectionAndDocuments(
+      //   'collections',
+      //   collectionsArray.map(({ title, items }) => ({ title, items }))
+      // ) --- this was only to add date to the db
     })
   }
 
@@ -64,6 +69,7 @@ class App extends Component {
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser
+  // collectionsArray: selectCollectionsForPreview --- only to add data to the db
 })
 
 const mapDispatchToProps = dispatch => ({
